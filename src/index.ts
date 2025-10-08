@@ -2,6 +2,11 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 const app: Application = express();
 const port = 4000;
+// get - awah
+// delete - ustgah
+// patch - zasah
+//post - uguh
+//nemealt
 const Dish = [
   {
     id: 1,
@@ -14,6 +19,9 @@ const Dish = [
 ];
 app.use(cors());
 app.get("/", (req: Request, res: Response) => {
+  res.send("hi~ it's me ");
+});
+app.get("/AddNewDish", (req: Request, res: Response) => {
   res.json(Dish);
 });
 app.listen(port, () => {
